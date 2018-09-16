@@ -84,7 +84,7 @@ namespace Entidades
             }
             else
             {
-                Console.Write("Valor Invalido");
+              binario ="Valor Invalido";
             }
             return binario;
         }
