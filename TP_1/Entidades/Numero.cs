@@ -10,7 +10,7 @@ namespace Entidades
     {
         private double numero;
 
-        public string setNumero
+        public string SetNumero
         {
             set
             {
@@ -29,31 +29,29 @@ namespace Entidades
         }
         public Numero(string numero)
         {
-            setNumero = numero;
+            SetNumero = numero;
         }
 
         private double ValidarNumero(string strNumero)
         {
-            double numero = 0, numeroValido;
-            bool validar = false;
+            double numero = 0;
 
-            validar = double.TryParse(strNumero, out numeroValido);
-            if (validar)
+            if (double.TryParse(strNumero, out double numeroValido))
             {
                 numero = numeroValido;
             }
             return numero;
         }
-        public string BinarioDecimal(string binary)
+        public string BinarioDecimal(string binario)
         {
-            int exponente = binary.Length - 1;
-            int num_decimal = 0;
+            int exponente = binario.Length - 1;
+            double num_decimal = 0;
 
-            for (int i = 0; i < binary.Length; i++)
+            for (int i = 0; i < binario.Length; i++)
             {
-                if (int.Parse(binary.Substring(i, 1)) == 1)
+                if (double.Parse(binario.Substring(i, 1)) == 1)
                 {
-                    num_decimal = num_decimal + int.Parse(System.Math.Pow(2, double.Parse(exponente.ToString())).ToString());
+                    num_decimal = num_decimal + double.Parse(System.Math.Pow(2, double.Parse(exponente.ToString())).ToString());
                 }
                 exponente--;
             }
@@ -84,15 +82,14 @@ namespace Entidades
             }
             else
             {
-              binario ="Valor Invalido";
+                binario = "Valor Invalido";
             }
             return binario;
         }
         public string DecimalBinario(string numero)
         {
             string binario = "";
-            double numeroParse = 0;
-            double.TryParse(numero, out numeroParse);
+            double.TryParse(numero, out double numeroParse);
 
             binario = DecimalBinario(numeroParse);
             return binario;
@@ -117,6 +114,7 @@ namespace Entidades
         {
             return num.numero - num1.numero;
         }
+       
     }
 }
 

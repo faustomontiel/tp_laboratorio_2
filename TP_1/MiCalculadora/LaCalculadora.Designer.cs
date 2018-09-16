@@ -74,7 +74,7 @@
             this.btnOperar.TabIndex = 3;
             this.btnOperar.Text = "Operar";
             this.btnOperar.UseVisualStyleBackColor = true;
-            this.btnOperar.Click += new System.EventHandler(this.btnOperar_Click);
+            this.btnOperar.Click += new System.EventHandler(this.BtnOperar_Click);
             // 
             // btnLimpiar
             // 
@@ -84,7 +84,7 @@
             this.btnLimpiar.TabIndex = 4;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = true;
-            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            this.btnLimpiar.Click += new System.EventHandler(this.BtnLimpiar_Click);
             // 
             // btnCerrar
             // 
@@ -94,7 +94,7 @@
             this.btnCerrar.TabIndex = 5;
             this.btnCerrar.Text = "Cerrar";
             this.btnCerrar.UseVisualStyleBackColor = true;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            this.btnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
             // 
             // btnConvertirABinario
             // 
@@ -104,7 +104,7 @@
             this.btnConvertirABinario.TabIndex = 6;
             this.btnConvertirABinario.Text = "Convertir a Binario";
             this.btnConvertirABinario.UseVisualStyleBackColor = true;
-            this.btnConvertirABinario.Click += new System.EventHandler(this.btnConvertirABinario_Click);
+            this.btnConvertirABinario.Click += new System.EventHandler(this.BtnConvertirABinario_Click);
             // 
             // btnConvertirADecimal
             // 
@@ -114,16 +114,16 @@
             this.btnConvertirADecimal.TabIndex = 7;
             this.btnConvertirADecimal.Text = "Convertir a Decimal";
             this.btnConvertirADecimal.UseVisualStyleBackColor = true;
-            this.btnConvertirADecimal.Click += new System.EventHandler(this.btnConvertirADecimal_Click);
+            this.btnConvertirADecimal.Click += new System.EventHandler(this.BtnConvertirADecimal_Click);
             // 
             // lblResultado
             // 
             this.lblResultado.AutoSize = true;
             this.lblResultado.Location = new System.Drawing.Point(63, 39);
             this.lblResultado.Name = "lblResultado";
-            this.lblResultado.Size = new System.Drawing.Size(35, 13);
+            this.lblResultado.Size = new System.Drawing.Size(55, 13);
             this.lblResultado.TabIndex = 8;
-            this.lblResultado.Text = "label1";
+            this.lblResultado.Text = "Resultado\r\n";
             // 
             // LaCalculadora
             // 

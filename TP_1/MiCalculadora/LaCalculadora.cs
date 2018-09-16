@@ -36,29 +36,29 @@ namespace MiCalculadora
             return calculadora.Operar(numeroUno, numeroDos, operador);
 
         }
-        private void btnOperar_Click(object sender, EventArgs e)
+        private void BtnOperar_Click(object sender, EventArgs e)
         {
             string resultado = "0";
             resultado=Operar(this.txtNumero1.Text, this.txtNumero2.Text, this.cmbOperador.Text).ToString();
             this.lblResultado.Text = resultado;
 
         }
-        private void btnConvertirABinario_Click(object sender, EventArgs e)
+        private void BtnConvertirABinario_Click(object sender, EventArgs e)
         {
             Numero numero = new Numero();
             this.lblResultado.Text = numero.DecimalBinario(this.lblResultado.Text);
         }
-        private void btnConvertirADecimal_Click(object sender, EventArgs e)
+        private void BtnConvertirADecimal_Click(object sender, EventArgs e)
         {
             Numero numero = new Numero();
             this.lblResultado.Text = numero.BinarioDecimal(this.lblResultado.Text);
         }
-        private void btnLimpiar_Click(object sender, EventArgs e)
+        private void BtnLimpiar_Click(object sender, EventArgs e)
         {
             Limpiar();
         }
 
-        private void btnCerrar_Click(object sender, EventArgs e)
+        private void BtnCerrar_Click(object sender, EventArgs e)
         {
             Close();
         }
