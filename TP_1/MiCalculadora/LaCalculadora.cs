@@ -39,7 +39,7 @@ namespace MiCalculadora
         private void btnOperar_Click(object sender, EventArgs e)
         {
             string resultado = "0";
-            resultado =Operar(this.txtNumero1.Text, this.txtNumero2.Text, this.cmbOperador.Text).ToString();
+            resultado=Operar(this.txtNumero1.Text, this.txtNumero2.Text, this.cmbOperador.Text).ToString();
             this.lblResultado.Text = resultado;
 
         }
@@ -63,6 +63,6 @@ namespace MiCalculadora
             Close();
         }
 
-      
+        
     }
 }

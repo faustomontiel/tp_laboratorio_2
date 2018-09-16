@@ -14,9 +14,9 @@ namespace Entidades
         {
             set
             {
-                this.numero = ValidarNumero(value);              
+                this.numero = ValidarNumero(value);
             }
-           
+
         }
         public Numero()
         {
@@ -34,7 +34,7 @@ namespace Entidades
 
         private double ValidarNumero(string strNumero)
         {
-            double numero = 0,numeroValido;
+            double numero = 0, numeroValido;
             bool validar = false;
 
             validar = double.TryParse(strNumero, out numeroValido);
@@ -42,7 +42,7 @@ namespace Entidades
             {
                 numero = numeroValido;
             }
-            return numero;        
+            return numero;
         }
         public string BinarioDecimal(string binary)
         {
@@ -92,7 +92,7 @@ namespace Entidades
         {
             string binario = "";
             double numeroParse = 0;
-            double.TryParse(numero,out numeroParse);
+            double.TryParse(numero, out numeroParse);
 
             binario = DecimalBinario(numeroParse);
             return binario;
@@ -100,7 +100,7 @@ namespace Entidades
 
         }
 
-       
+
         public static double operator +(Numero num, Numero num1)
         {
             return num.numero + num1.numero;

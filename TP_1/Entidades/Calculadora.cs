@@ -10,7 +10,7 @@ namespace Entidades
     {
         private static string ValidarOperador(string operador)
         {
-            
+
             if (operador == "+" || operador == "-" || operador == "*" || operador == "/")
             {
                 return operador;
@@ -22,7 +22,7 @@ namespace Entidades
         }
         public double Operar(Numero num, Numero num1, string operador)
         {
-            double resultado =0;
+            double resultado = 0;
 
             operador = ValidarOperador(operador);
 
