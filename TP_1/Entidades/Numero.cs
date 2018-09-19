@@ -20,7 +20,7 @@ namespace Entidades
         }
         public Numero()
         {
-
+            this.numero = 0;
         }
 
         public Numero(double numero)
