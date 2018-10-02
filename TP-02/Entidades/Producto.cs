@@ -57,7 +57,7 @@ namespace Entidades_2018
 
 
         /// <summary>
-        /// Muestra los datos base que van a hederar las clases hijas.
+        /// Muestra los datos basicos que van a hederar las clases hijas.
         /// </summary>
         /// <param name="p"></param>
         public static explicit operator string(Producto p)
@@ -96,7 +96,7 @@ namespace Entidades_2018
         /// <returns></returns>
         public static bool operator !=(Producto v1, Producto v2)
         {
-            return !(v1.codigoDeBarras == v2.codigoDeBarras);
+            return !(v1 == v2);
         }
     }
 }
