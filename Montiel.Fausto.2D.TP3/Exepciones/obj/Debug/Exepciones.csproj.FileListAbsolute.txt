@@ -1,9 +1,0 @@
-C:\Users\nelso\source\repos\Montiel.Fausto.2D.TP3\Exepciones\bin\Debug\Exepciones.dll
-C:\Users\nelso\source\repos\Montiel.Fausto.2D.TP3\Exepciones\bin\Debug\Exepciones.pdb
-C:\Users\nelso\source\repos\Montiel.Fausto.2D.TP3\Exepciones\obj\Debug\Exepciones.csprojAssemblyReference.cache
-C:\Users\nelso\source\repos\Montiel.Fausto.2D.TP3\Exepciones\obj\Debug\Exepciones.csproj.CoreCompileInputs.cache
-C:\Users\nelso\source\repos\Montiel.Fausto.2D.TP3\Exepciones\obj\Debug\Exepciones.dll
-C:\Users\nelso\source\repos\Montiel.Fausto.2D.TP3\Exepciones\obj\Debug\Exepciones.pdb
-C:\Users\nelso\source\repos\Montiel.Fausto.2D.TP3\Exepciones\bin\Debug\Archivos.dll
-C:\Users\nelso\source\repos\Montiel.Fausto.2D.TP3\Exepciones\bin\Debug\Archivos.pdb
-C:\Users\nelso\source\repos\Montiel.Fausto.2D.TP3\Exepciones\obj\Debug\Exepciones.csproj.CopyComplete
