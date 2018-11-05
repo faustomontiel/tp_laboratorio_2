@@ -11,3 +11,16 @@ C:\Users\nelso\source\repos\Montiel.Fausto.2D.TP3\ClasesInstanciables\obj\Debug\
 C:\Users\nelso\source\repos\Montiel.Fausto.2D.TP3\ClasesInstanciables\obj\Debug\ClasesInstanciables.pdb
 C:\Users\nelso\source\repos\Montiel.Fausto.2D.TP3\ClasesInstanciables\bin\Debug\Exepciones.dll
 C:\Users\nelso\source\repos\Montiel.Fausto.2D.TP3\ClasesInstanciables\bin\Debug\Exepciones.pdb
+C:\Users\nelso\tp_laboratorio_2\Montiel.Fausto.2D.TP3\ClasesInstanciables\bin\Debug\ClasesInstanciables.dll
+C:\Users\nelso\tp_laboratorio_2\Montiel.Fausto.2D.TP3\ClasesInstanciables\bin\Debug\ClasesInstanciables.pdb
+C:\Users\nelso\tp_laboratorio_2\Montiel.Fausto.2D.TP3\ClasesInstanciables\bin\Debug\Archivos.dll
+C:\Users\nelso\tp_laboratorio_2\Montiel.Fausto.2D.TP3\ClasesInstanciables\bin\Debug\ClasesAbstractas.dll
+C:\Users\nelso\tp_laboratorio_2\Montiel.Fausto.2D.TP3\ClasesInstanciables\bin\Debug\Exepciones.dll
+C:\Users\nelso\tp_laboratorio_2\Montiel.Fausto.2D.TP3\ClasesInstanciables\bin\Debug\Archivos.pdb
+C:\Users\nelso\tp_laboratorio_2\Montiel.Fausto.2D.TP3\ClasesInstanciables\bin\Debug\ClasesAbstractas.pdb
+C:\Users\nelso\tp_laboratorio_2\Montiel.Fausto.2D.TP3\ClasesInstanciables\bin\Debug\Exepciones.pdb
+C:\Users\nelso\tp_laboratorio_2\Montiel.Fausto.2D.TP3\ClasesInstanciables\obj\Debug\ClasesInstanciables.csprojAssemblyReference.cache
+C:\Users\nelso\tp_laboratorio_2\Montiel.Fausto.2D.TP3\ClasesInstanciables\obj\Debug\ClasesInstanciables.csproj.CoreCompileInputs.cache
+C:\Users\nelso\tp_laboratorio_2\Montiel.Fausto.2D.TP3\ClasesInstanciables\obj\Debug\ClasesInstanciables.csproj.CopyComplete
+C:\Users\nelso\tp_laboratorio_2\Montiel.Fausto.2D.TP3\ClasesInstanciables\obj\Debug\ClasesInstanciables.dll
+C:\Users\nelso\tp_laboratorio_2\Montiel.Fausto.2D.TP3\ClasesInstanciables\obj\Debug\ClasesInstanciables.pdb

@@ -1,8 +1,8 @@
 CLASE DE: Programacion POR: NOMBRE COMPLETO: Lopez, JuanNACIONALIDAD: Argentino
 LEGAJO NUMERO: 1
 CLASES DEL DIA: 
+Legislacion
 Programacion
-SPD
 
 ALUMNOS: 
 NOMBRE COMPLETO: Lopez, JuanNACIONALIDAD: Argentino

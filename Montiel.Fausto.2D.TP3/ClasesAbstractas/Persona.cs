@@ -173,21 +173,15 @@ namespace EntidadesAbstractas
         /// <returns></returns>
         private int ValidarDni(ENacionalidad nacionalidad, string dato)
         {
-            int dniEntero = 0;
-            if (Regex.IsMatch(dato, @"^[0-9]+[0-9\.]*$"))
+            int dniEntero;
+            if(int.TryParse(dato,out dniEntero))
             {
-                dato = dato.Replace(".", "");
-                if (int.TryParse(dato, out dniEntero))
-                {
-                    dniEntero = ValidarDni(nacionalidad, dniEntero);
-                }
+                return ValidarDni(nacionalidad, dniEntero);
             }
             else
             {
                 throw new DniInvalidoException("Dni con caracteres invalidos");
             }
-
-            return dniEntero;
         }
         /// <summary>
         /// Validacion del Nombre y apellido utilizando expreciones regulares.
@@ -197,15 +191,12 @@ namespace EntidadesAbstractas
         private string ValidarNombreApellido(string dato)
         {
             string salida = "";
-            if(Regex.IsMatch(dato, @"^[a-zA-Z]+$/"))
+            if (Regex.IsMatch(dato, @"^[a-zA-Z]+$/"))
             {
                 salida = dato;
             }
             return salida;
         }
-
-
-
 
         #endregion 
 
