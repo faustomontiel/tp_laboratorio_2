@@ -8,7 +8,7 @@ namespace Excepciones
 {
     public class DniInvalidoException : Exception
     {
-        private const string mensajeBase = "DNI INVALIDO";
+        public const string mensajeBase = "DNI INVALIDO";
 
         public DniInvalidoException()
         {

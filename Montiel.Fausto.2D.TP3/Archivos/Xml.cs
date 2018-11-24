@@ -13,8 +13,8 @@ namespace Archivos
         /// <summary>
         /// Serializa datos en formato xml.
         /// </summary>
-        /// <param name="archivo"></param>
-        /// <param name="datos"></param>
+        /// <param name="archivo">Path</param>
+        /// <param name="datos">Datos a guardar</param>
         /// <returns></returns>
         public bool Guardar(string archivo, T datos)
         {
@@ -40,8 +40,8 @@ namespace Archivos
         /// <summary>
         /// Deserializa datos en formato xml.
         /// </summary>
-        /// <param name="archivo"></param>
-        /// <param name="datos"></param>
+        /// <param name="archivo">Path</param>
+        /// <param name="datos">Objeto donde se guardara</param>
         /// <returns></returns>
         public bool Leer(string archivo, out T datos)
         {

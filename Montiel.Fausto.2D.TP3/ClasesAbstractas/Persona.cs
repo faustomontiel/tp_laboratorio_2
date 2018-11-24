@@ -19,10 +19,10 @@ namespace EntidadesAbstractas
         }
 
         #region Atributos
-        private string _apellido;
-        private int _dni;
-        private ENacionalidad _nacionalidad;
-        private string _nombre;
+        private string apellido;
+        private int dni;
+        private ENacionalidad nacionalidad;
+        private string nombre;
         #endregion
 
         #region Propiedades
@@ -30,51 +30,51 @@ namespace EntidadesAbstractas
         {
             get
             {
-                return this._apellido;
+                return this.apellido;
             }
             set
             {
-                this._apellido = ValidarNombreApellido(value);
+                this.apellido = ValidarNombreApellido(value);
             }
         }       
         public int DNI
         {
             get
             {
-                return this._dni;
+                return this.dni;
             }
             set
             {
-                this._dni = ValidarDni(this.Nacionalidad,value);
+                this.dni = ValidarDni(this.Nacionalidad,value);
             }
         }
         public ENacionalidad Nacionalidad
         {
             get
             {
-                return this._nacionalidad;
+                return this.nacionalidad;
             }
             set
             {
-                this._nacionalidad = value;
+                this.nacionalidad = value;
             }
         }
         public string Nombre
         {
             get
             {
-                return this._nombre;
+                return this.nombre;
             }
             set
             {
-                this._nombre = ValidarNombreApellido(value);
+                this.nombre = ValidarNombreApellido(value);
             }
         }
         public string StringToDNI
         {          
             set
             {
-                this._dni = ValidarDni(this.Nacionalidad, value);
+                this.dni = ValidarDni(this.Nacionalidad, value);
             }
         }
 
@@ -95,9 +95,9 @@ namespace EntidadesAbstractas
         /// <param name="nacionalidad"></param>
         public Persona(string nombre, string apellido, ENacionalidad nacionalidad):this()
         {
-            this._nombre = nombre;
-            this._apellido = apellido;
-            this._nacionalidad = nacionalidad;
+            this.nombre = nombre;
+            this.apellido = apellido;
+            this.nacionalidad = nacionalidad;
         }
         /// <summary>
         /// Constructor de instancia con set dni entero.

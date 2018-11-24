@@ -10,20 +10,51 @@ namespace ClasesInstanciables
     public class Profesor : Universitario
     {
         #region Atributos
-        private Queue<Universidad.EClases> _clasesDelDia;
-        private static Random _random;
+        private Queue<Universidad.EClases> clasesDelDia;
+        private static Random random;
+        #endregion
+
+        #region Construcores
+        /// <summary>
+        /// constructor de clase,inicializa random.
+        /// </summary>
+        static Profesor()
+        {
+            random = new Random();
+        }
+        /// <summary>
+        /// constructor por defecto.
+        /// </summary>
+        public Profesor()
+        {
+        }
+        /// <summary>
+        /// constructor de instancia,inicializa las clases.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="nombre"></param>
+        /// <param name="apellido"></param>
+        /// <param name="dni"></param>
+        /// <param name="nacionalidad"></param>
+        public Profesor(int id, string nombre, string apellido, string dni, ENacionalidad nacionalidad)
+            : base(id, nombre, apellido, dni, nacionalidad)
+        {
+            this.clasesDelDia = new Queue<Universidad.EClases>();
+            this._randomClases();
+        }
+
         #endregion
 
         #region Metodos
         /// <summary>
-        /// Muestra las clases que dicta en el dia
+        /// Muestra las clases que dicta en el dia.
         /// </summary>
         /// <returns></returns>
         protected override string ParticiparEnClase()
         {
             StringBuilder sb = new StringBuilder();
             sb.AppendLine("CLASES DEL DIA: ");
-            foreach (Universidad.EClases clases in this._clasesDelDia)
+            foreach (Universidad.EClases clases in this.clasesDelDia)
             {
                 sb.AppendLine("" + clases);
             }
@@ -50,54 +81,36 @@ namespace ClasesInstanciables
         /// </summary>
         private void _randomClases()
         {
-            this._clasesDelDia.Enqueue((Universidad.EClases)_random.Next(0, 4));
-            this._clasesDelDia.Enqueue((Universidad.EClases)_random.Next(0, 4));
+            this.clasesDelDia.Enqueue((Universidad.EClases)random.Next(0, 4));
+            this.clasesDelDia.Enqueue((Universidad.EClases)random.Next(0, 4));
         }
-        public static bool operator ==(Profesor i,Universidad.EClases clase)
+        /// <summary>
+        /// Retorna true si el profesor dicta esa clase.
+        /// </summary>
+        /// <param name="i"></param>
+        /// <param name="clase"></param>
+        /// <returns></returns>
+        public static bool operator ==(Profesor i, Universidad.EClases clase)
         {
             bool salida = false;
-            if(i._clasesDelDia.Contains(clase))
+            foreach (Universidad.EClases a in i.clasesDelDia)
             {
-                salida = true;
+                if (a == clase)
+                    salida = true;
             }
             return salida;
         }
-
+        /// <summary>
+        /// Retornara true si el profesor no dicta esa clase.
+        /// </summary>
+        /// <param name="i"></param>
+        /// <param name="clase"></param>
+        /// <returns></returns>
         public static bool operator !=(Profesor i, Universidad.EClases clase)
         {
-            return !(i==clase);
+            return !(i == clase);
         }
         #endregion
-
-        #region Construcores
-        /// <summary>
-        /// constructor de clase,inicializa random.
-        /// </summary>
-        static Profesor()
-        {
-            _random = new Random();
-        }
-        /// <summary>
-        /// constructor por defecto.
-        /// </summary>
-        public Profesor()
-        {
-        }
-        /// <summary>
-        /// constructor de instancia,inicializa las clases.
-        /// </summary>
-        /// <param name="id"></param>
-        /// <param name="nombre"></param>
-        /// <param name="apellido"></param>
-        /// <param name="dni"></param>
-        /// <param name="nacionalidad"></param>
-        public Profesor(int id, string nombre, string apellido, string dni, ENacionalidad nacionalidad)
-            : base(id, nombre, apellido, dni, nacionalidad)
-        {
-            this._clasesDelDia = new Queue<Universidad.EClases>();
-            this._randomClases();
-        }
-
-        #endregion
+     
     }
 }

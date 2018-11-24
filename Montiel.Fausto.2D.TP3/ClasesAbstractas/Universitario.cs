@@ -9,11 +9,11 @@ namespace EntidadesAbstractas
     public abstract class Universitario : Persona
     {
 
-        private int _legajo;
+        private int legajo;
 
         #region Constructores
         /// <summary>
-        /// Constructor por defecto.
+        /// Constructor.
         /// </summary>
         public Universitario()
         {
@@ -29,7 +29,7 @@ namespace EntidadesAbstractas
         public Universitario(int legajo, string nombre, string apellido, string dni, ENacionalidad nacionalidad)
             : base(nombre, apellido,dni, nacionalidad)
         {
-            this._legajo = legajo;
+            this.legajo = legajo;
         }
 
         #endregion
@@ -44,7 +44,7 @@ namespace EntidadesAbstractas
             StringBuilder sb = new StringBuilder();
 
             sb.AppendLine(base.ToString());
-            sb.AppendFormat("LEGAJO NUMERO: {0}", this._legajo);
+            sb.AppendFormat("LEGAJO NUMERO: {0}", this.legajo);
 
             return sb.ToString();
         }
@@ -63,7 +63,7 @@ namespace EntidadesAbstractas
             if (!ReferenceEquals(obj, null) && obj is Universitario)
             {
                 Universitario objeto = (Universitario)obj;
-                if (objeto._legajo == this._legajo && objeto.DNI == this.DNI)
+                if (objeto.legajo == this.legajo && objeto.DNI == this.DNI)
                 {
                     return true;
                 }

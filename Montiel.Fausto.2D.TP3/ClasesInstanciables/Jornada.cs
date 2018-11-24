@@ -12,10 +12,9 @@ namespace ClasesInstanciables
     public class Jornada
     {
         #region Atributos
-
-        private List<Alumno> _alumnos;
-        private Universidad.EClases _clase;
-        private Profesor _instructor;
+        private List<Alumno> alumnos;
+        private Universidad.EClases clase;
+        private Profesor instructor;
         #endregion
 
         #region Constructores
@@ -24,7 +23,7 @@ namespace ClasesInstanciables
         /// </summary>
         private Jornada()
         {
-            this._alumnos = new List<Alumno>();
+            this.alumnos = new List<Alumno>();
         }
         /// <summary>
         /// Constructor de instancia
@@ -34,8 +33,8 @@ namespace ClasesInstanciables
         public Jornada(Universidad.EClases clase, Profesor instructor)
             : this()
         {
-            this._clase = clase;
-            this._instructor = instructor;
+            this.clase = clase;
+            this.instructor = instructor;
         }
         #endregion
 
@@ -44,12 +43,12 @@ namespace ClasesInstanciables
         {
             get
             {
-                return this._alumnos;
+                return this.alumnos;
 
             }
             set
             {
-                this._alumnos = value;
+                this.alumnos = value;
             }
         }
 
@@ -57,12 +56,12 @@ namespace ClasesInstanciables
         {
             get
             {
-                return this._clase;
+                return this.clase;
             }
 
             set
             {
-                this._clase = value;
+                this.clase = value;
             }
         }
 
@@ -70,12 +69,12 @@ namespace ClasesInstanciables
         {
             get
             {
-                return this._instructor;
+                return this.instructor;
 
             }
             set
             {
-                this._instructor = value;
+                this.instructor = value;
             }
         }
 
@@ -85,9 +84,9 @@ namespace ClasesInstanciables
 
         #region Metodos
         /// <summary>
-        /// Guarda informacion de la joranada.
+        /// Guarda informacion de la joranada en un archivo de texto.
         /// </summary>
-        /// <param name="j"></param>
+        /// <param name="j">Contenido a ser guardado.</param>
         /// <returns></returns>
         public static bool Guardar(Jornada j)
         {
@@ -106,7 +105,7 @@ namespace ClasesInstanciables
             return salida;
         }
         /// <summary>
-        /// Lee la informacion ya obtenida de una jornada.
+        /// Lee la informacion de un archivo de texto de una jornada existente.
         /// </summary>
         /// <returns></returns>
 
@@ -131,7 +130,7 @@ namespace ClasesInstanciables
 
         }
         /// <summary>
-        /// Sobrecarga muestra los datos de la jornada.
+        /// Muestra la informacion de una clase (Asignatura, profesor y alumnos).
         /// </summary>
         /// <returns></returns>
         public override string ToString()
@@ -147,20 +146,41 @@ namespace ClasesInstanciables
             }
             return sb.ToString();
         }
-
+        /// <summary>
+        /// Si el alumno se encuentra en la jornada retornara true.
+        /// </summary>
+        /// <param name="j">Jornada</param>
+        /// <param name="a">Alumno a comparar</param>
+        /// <returns></returns>
         public static bool operator ==(Jornada j, Alumno a)
         {
             bool salida = false;
-            if (j.Alumnos.Contains(a))
+
+            foreach (Alumno alumno in j.Alumnos)
             {
-                salida = true;
+                if (alumno == a)
+                {
+                    salida = true;
+                }
             }
             return salida;
         }
+        /// <summary>
+        /// Si el alumno no se encuentra en la jornada retornara true.
+        /// </summary>
+        /// <param name="j"></param>
+        /// <param name="a"></param>
+        /// <returns></returns>
         public static bool operator !=(Jornada j, Alumno a)
         {
             return !(j==a);
         }
+        /// <summary>
+        /// Agrega un alumno a la jornada en caso de este no se encuentre.
+        /// </summary>
+        /// <param name="j">Jornada donde se agregara al alumno</param>
+        /// <param name="a">Alumno a agregar</param>
+        /// <returns></returns>
         public static Jornada operator +(Jornada j,Alumno a)
         {
             if(j!=a)

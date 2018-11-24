@@ -15,19 +15,20 @@ public class Alumno : Universitario
         Deudor,
         Becado
     }
-
-    private Universidad.EClases _clasesQueToma;
-    private EEstadoCuenta _estadoCuneta;
+    #region Atributos
+    private Universidad.EClases clasesQueToma;
+    private EEstadoCuenta estadoCuneta;
+    #endregion 
 
     #region Constructores
     /// <summary>
-    /// Constructor por defecto.
+    /// Constructor.
     /// </summary>
     public Alumno()
     {
     }
     /// <summary>
-    /// Constructor de instancia
+    /// Constructor de instancia.
     /// </summary>
     /// <param name="id"></param>
     /// <param name="nombre"></param>
@@ -38,7 +39,7 @@ public class Alumno : Universitario
     public Alumno(int id, string nombre, string apellido, string dni, ENacionalidad nacionalidad, Universidad.EClases clasesQueToma)
     : base(id, nombre, apellido, dni, nacionalidad)
     {
-        this._clasesQueToma = clasesQueToma;
+        this.clasesQueToma = clasesQueToma;
     }
     /// <summary>
     /// construcor de instancia.
@@ -53,7 +54,7 @@ public class Alumno : Universitario
     public Alumno(int id, string nombre, string apellido, string dni, ENacionalidad nacionalidad, Universidad.EClases clasesQueToma, EEstadoCuenta estadoCuenta)
     : this(id, nombre, apellido, dni, nacionalidad, clasesQueToma)
     {
-        this._estadoCuneta = estadoCuenta;
+        this.estadoCuneta = estadoCuenta;
     }
     #endregion
 
@@ -67,13 +68,13 @@ public class Alumno : Universitario
         StringBuilder sb = new StringBuilder();
 
         sb.AppendLine(base.MostrarDatos());
-        if (this._estadoCuneta == EEstadoCuenta.AlDia)
+        if (this.estadoCuneta == EEstadoCuenta.AlDia)
         {
             sb.AppendFormat("ESTADO DE CUENTA: Cuota Al dia ");
         }
         else
         {
-            sb.AppendFormat("ESTADO DE CUENTA:{0} ", this._estadoCuneta);
+            sb.AppendFormat("ESTADO DE CUENTA:{0} ", this.estadoCuneta);
         }
         sb.AppendLine(ParticiparEnClase());
         return sb.ToString();
@@ -85,11 +86,11 @@ public class Alumno : Universitario
     protected override string ParticiparEnClase()
     {
         StringBuilder sb = new StringBuilder();
-        sb.AppendFormat("TOMA CLASES DE:{0}", this._clasesQueToma);
+        sb.AppendFormat("TOMA CLASES DE:{0}", this.clasesQueToma);
         return sb.ToString();
     }
     /// <summary>
-    /// sobrecarga ToString muestra los datos del alumno.
+    /// Sobrecarga ToString muestra los datos del alumno.
     /// </summary>
     /// <returns></returns>
     public override string ToString()
@@ -105,15 +106,21 @@ public class Alumno : Universitario
     public static bool operator ==(Alumno a, Universidad.EClases clases)
     {
         bool salida = false;
-        if (a._clasesQueToma == clases && a._estadoCuneta != EEstadoCuenta.Deudor)
+        if (a.clasesQueToma == clases && a.estadoCuneta != EEstadoCuenta.Deudor)
         {
             salida = true;
         }
         return salida;
     }
+    /// <summary>
+    /// Retornara true cuando el alumno no tome esa clase ni tenga la cuota paga.
+    /// </summary>
+    /// <param name="a"></param>
+    /// <param name="clases"></param>
+    /// <returns></returns>
     public static bool operator !=(Alumno a, Universidad.EClases clases)
     {
-        return !(a == clases);
+        return a.clasesQueToma != clases;
     }
 
 
