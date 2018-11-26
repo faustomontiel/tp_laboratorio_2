@@ -9,33 +9,36 @@ namespace Entidades
 {
     public static class GuardaString
     {
-        public static bool Guardar(this string texto,string archivo)
+        /// <summary>
+        /// Metodo de extension creara un archivo de texto lo guardara en el escritorio.
+        /// </summary>
+        /// <param name="texto"></param>
+        /// <param name="archivo"></param>
+        /// <returns></returns>
+        public static bool Guardar(this string texto, string archivo)
         {
-            StreamWriter sw = null;
-            bool salida = false;
+            StreamWriter file = null;
+            bool retorno = false;
             try
             {
-                if (File.Exists(archivo))
-                {
-                    sw = new StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\" + archivo, true);
-                    sw.WriteLine(texto);
-                    salida = true;
+                file = new StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "/" + archivo, true);
+                file.WriteLine(texto);
+                retorno = true;
 
-                }
             }
-            catch(Exception e)
+            catch (Exception)
             {
-                throw e;
+                throw;
             }
             finally
             {
-                if(!(sw is null))
+                if (file != null)
                 {
-                    sw.Close();
+                    file.Close();
                 }
             }
-            return salida;
+
+            return retorno;
         }
-        
     }
 }

@@ -1,0 +1,13 @@
+C:\Users\nelso\tp_laboratorio_2\TP_04\MainCorreo\bin\Debug\MainCorreo.exe.config
+C:\Users\nelso\tp_laboratorio_2\TP_04\MainCorreo\bin\Debug\MainCorreo.exe
+C:\Users\nelso\tp_laboratorio_2\TP_04\MainCorreo\bin\Debug\MainCorreo.pdb
+C:\Users\nelso\tp_laboratorio_2\TP_04\MainCorreo\obj\Debug\MainCorreo.csprojAssemblyReference.cache
+C:\Users\nelso\tp_laboratorio_2\TP_04\MainCorreo\obj\Debug\MainCorreo.Properties.Resources.resources
+C:\Users\nelso\tp_laboratorio_2\TP_04\MainCorreo\obj\Debug\MainCorreo.csproj.GenerateResource.cache
+C:\Users\nelso\tp_laboratorio_2\TP_04\MainCorreo\obj\Debug\MainCorreo.csproj.CoreCompileInputs.cache
+C:\Users\nelso\tp_laboratorio_2\TP_04\MainCorreo\obj\Debug\MainCorreo.exe
+C:\Users\nelso\tp_laboratorio_2\TP_04\MainCorreo\obj\Debug\MainCorreo.pdb
+C:\Users\nelso\tp_laboratorio_2\TP_04\MainCorreo\bin\Debug\Entidades.dll
+C:\Users\nelso\tp_laboratorio_2\TP_04\MainCorreo\bin\Debug\Entidades.pdb
+C:\Users\nelso\tp_laboratorio_2\TP_04\MainCorreo\obj\Debug\MainCorreo.FrmPpal.resources
+C:\Users\nelso\tp_laboratorio_2\TP_04\MainCorreo\obj\Debug\MainCorreo.csproj.CopyComplete
